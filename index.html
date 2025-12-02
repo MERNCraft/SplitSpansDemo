@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p,
+    pre {
+      /* max-width:25em; */
+      margin: 0 auto;
+      padding: 1em;
+      white-space: pre-wrap;
+      color: #ddd;
+      border: aem solid transparent;
+    }
+    span[lang=sp] {
+      background-color: #660;
+      &::before {
+        content: "🇪🇸 ";
+      }
+    }
+    span[lang=fr] {
+      background-color: #006;
+      &::before {
+        content: "🇫🇷 ";
+      }
+    }
+    span[lang=th] {
+      background-color: #300;
+      &::before {
+        content: "🇹🇭 ";
+      }
+    }
+    span.pre {
+      font-family: monospace;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+<p >This tutorial shows you how to <b>build a tool for selecting text</b> and how to <b>wrap the selected text in a span</b> of its own. You can test this tool right here. <i>Click and drag on this to make a selection, then press Enter to create a new span</i>.
+
+You'll notice that <u>your selection snaps to start and end with <i>whole words</i></u>, and that the <u><i>punctuation</i> around the start and end words is <i>included in the selection</i></u>.
+
+The techniques used here could be useful if you are building a <b>note taking app</b>, a <b>collaborative writing environment</b> like Google Docs, a <b>language-learning app</b>, an <b>accessibility tool for assisted reading</b>, or something similar.
+
+Browsers have made text selection seem simple for end users, but for you, the developer, formatting tags, nested spans, whitespace rules, and browser inconsistencies make it surprisingly complex.
+
+Here are some of the expectations that your end-users may have:
+
+They might want to make a selection that would merge existing spans or split formatting tags.
+
+Sometimes separate blocks need to be kept together. For example, blocks like 37.2° C, 60 km/h, January&nbsp;1&nbsp;2000, J.R.R.&nbsp;Tolkein and  £11&nbsp;million only make sense when all the pieces are kept together. Try it: if you only select the "C" of "37.2° C", for instance, the whole chunk will be selected automatically.
+
+Different browsers treat text selection in different ways (looking at you Safari!) and this tutorial show you how to these differences and other quirks.
+
+Different languages have different punctuation rules. Spanish has inverted punctuation, <span lang="sp">Por ejemplo: "¡Hola! ¿Qué tan bueno es tu español?"</span>. French requires spaces between some punctuation characters and the words that they are associated with. <span lang="fr">Par exemple : « Quoi qu’a dit ? » (tiré du poème « La môme néant » de Jean Tardieu).</span> And some languages have no gaps between words at all: <span lang="th">ตัวอย่าง: "นี่คือประโยคหนึ่งภาษาไทย ช่องว่างแสดงจุดเริ่มต้นของประโยคใหม่"</span>
+
+You'll see how to work with DOM elements and nodes, with Selection and Range objects, with Regular Expressions, and with the TreeWalker and Intl.Segmenter APIs. And you will learn to appreciate <span class="pre">{ white-space: pre-wrap; }</span>.
+
+Play with this demo for a while, and then read on to discover all the concepts that you will be mastering as you build your own version of this tool.</p>
+</body>
+</html>
