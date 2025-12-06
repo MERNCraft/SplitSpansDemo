@@ -40,7 +40,9 @@
   </style>
 </head>
 <body>
-<p >This tutorial shows you how to <b>build a tool for selecting text</b> and how to <b>wrap the selected text in a span</b> of its own. You can test this tool right here. <i>Click and drag on this to make a selection, then press Enter to create a new span</i>.
+<p >This tutorial shows you how to <b>build a tool for selecting text</b>, and how to <b>wrap the selected text in a span</b> of its own.
+
+You can test this tool right here. <i>Click and drag on this text to make a selection, then press Enter to create a new span</i>.
 
 You'll notice that <u>your selection snaps to start and end with <i>whole words</i></u>, and that the <u><i>punctuation</i> around the start and end words is <i>included in the selection</i></u>.
 
@@ -56,7 +58,7 @@ Sometimes separate blocks need to be kept together. For example, blocks like 37.
 
 Different browsers treat text selection in different ways (looking at you Safari!) and this tutorial show you how to these differences and other quirks.
 
-Different languages have different punctuation rules. Spanish has inverted punctuation, <span lang="sp">Por ejemplo: "¡Hola! ¿Qué tan bueno es tu español?"</span>. French requires spaces between some punctuation characters and the words that they are associated with. <span lang="fr">Par exemple : « Quoi qu’a dit ? » (tiré du poème « La môme néant » de Jean Tardieu).</span> And some languages have no gaps between words at all: <span lang="th">ตัวอย่าง: "นี่คือประโยคหนึ่งภาษาไทย ช่องว่างแสดงจุดเริ่มต้นของประโยคใหม่"</span>
+Different languages have different punctuation rules. Spanish has inverted punctuation, <span lang="sp">Por ejemplo: "¡Hola! ¿Qué tan bueno es tu español?"</span>. French requires spaces between some punctuation characters and the words that they are associated with. <span lang="fr">Par exemple : « Quoi qu’a dit ? » (tiré du poème « La môme néant » de Jean Tardieu).</span> And some languages have no gaps between words at all: <span lang="th">นี่คือประโยคตัวอย่างภาษาไทย ช่องว่างนี้แสดงจุดเริ่มต้นของประโยคใหม่</span>
 
 You'll see how to work with DOM elements and nodes, with Selection and Range objects, with Regular Expressions, and with the TreeWalker and Intl.Segmenter APIs. And you will learn to appreciate <span class="pre">{ white-space: pre-wrap; }</span>.
 
